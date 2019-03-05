@@ -43,11 +43,11 @@ This script is a test script, and so covers only some basic functionality of our
 
 ### How do I uninstall the script?
 
-Very simple.  First edit the crontab and remove the line that was added during installation.  Second, delete the script that you downloaded from your system, so that it no longer exists on your node.
+Very simple.  Just delete the script that you downloaded from your system, so that it no longer exists on your server.
 
 ### Help and Assistance?
 
-* Check our FAQ - https://nodecheck.io/site/faq
+* Check our API page - https://nodecheck.io/site/api
 * Support on our Discord - https://discordapp.com/invite/3VV5GkG
 
 ### Disclaimer
