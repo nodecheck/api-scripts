@@ -2,7 +2,7 @@
 
 The following script has been created so that API users can check/test our API service immediately once they have signed up to our API service.
 
-# How to obtain the script?
+### How to obtain the script?
 
 Download the script using curl (you may need to install the curl package first):
 
@@ -17,7 +17,7 @@ mv api.sh /usr/local/bin/
 chmod +x api.sh
 ```
 
-# How to run the script?
+### How to run the script?
 
 Once downloaded, and the script is executable, the script can be ran as follows:
 
@@ -33,7 +33,7 @@ or if you did not put it in your search PATH, then the script needs to be invoke
 
 without any additional parameters a help screen will appear providing you with instructions on which commands are available for use with the test script.  The script also depends on jq being installed, and if jq is unavailable within your PATH it will ask you to download and install appropriately.  The script also provides a link to the official site for jq.  Alternatively, search and install jq prior to running the script.
 
-# What commands are available?
+### What commands are available?
 
 This script is a test script, and so covers only some basic functionality of our API.  It's not provided with all the API commands that we offer.  The commands the script will return via our API service are:
 
