@@ -17,6 +17,17 @@ mv api.sh /usr/local/bin/
 chmod +x api.sh
 ```
 
+### How to configure the script?
+
+First you will need an API key.  Please contact one of the NodeCheck team to obtain access to our API via our Discord (link below).
+Edit the script and change:
+
+```
+APIKEY=your-api-key-here
+```
+
+replace ```your-api-key-here``` with the API key obtained from us.
+
 ### How to run the script?
 
 Once downloaded, and the script is executable, the script can be ran as follows:
