@@ -1,1 +1,1 @@
-# api-scripts
+## NodeCheck API Test Script
