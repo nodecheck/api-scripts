@@ -26,7 +26,14 @@ Edit the script and change:
 APIKEY=your-api-key-here
 ```
 
-replace ```your-api-key-here``` with the API key obtained from us.
+replace ```your-api-key-here``` with the API key obtained from us.  If you do not do this, when you first attempt to run the script, you will see the following:
+
+```
+You haven't added your API key to this script!
+Please edit the beginning of this script:
+
+APIKEY=your-api-key-here
+```
 
 ### How to run the script?
 
