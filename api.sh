@@ -62,7 +62,7 @@ else
     else
       if [ $APICMD == "ticker" ]
       then
-        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD -S
       elif [ $APICMD == "coinstats" ]
       then
         TICKER=$2
