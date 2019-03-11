@@ -34,30 +34,59 @@ then
   echo ""
 else
   # Check if API command was passed to the script, if not, give instructions
-  if [ -z "$APICMD" ]
+  if [ $APIKEY == "your-api-key-here" ]
   then
     echo ""
-    echo "You need to provide an API command to run this script."
-    echo "Examples:"
+    echo "You haven't added your API key to this script!"
+    echo "Please edit the beginning of this script:"
     echo ""
-    echo "Display available coins on our site:"
-    echo "		./api.sh ticker"
-    echo "Display coinstats (requires second parameter - ticker of coin):"
-    echo "		./api.sh coinstats dash"
-    echo "Display apistats - used API calls and API limit:"
-    echo "		./api.sh apistats"
+    echo "APIKEY=your-api-key-here"
     echo ""
   else
-    if [ $APICMD == "ticker" ]
+    if [ -z "$APICMD" ]
     then
-      curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD
-    elif [ $APICMD == "coinstats" ]
-    then
-      TICKER=$2
-      curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\",\"ticker\":\"$TICKER\"}" https://nodecheck.io/api/$APICMD | $JQCMD
-    elif [ $APICMD == "apistats" ]
-    then
-      curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      echo ""
+      echo "You need to provide an API command to run this script."
+      echo "Examples:"
+      echo ""
+      echo "./api.sh <main-command> <parameters>"
+      echo ""
+      echo "Display available coins on our site:	./api.sh ticker"
+      echo "Display coinstats:			./api.sh coinstats dash"
+      echo "Display apistats:			./api.sh apistats"
+      echo ""
+      echo "Add MN to monitor:			./api.sh add dash <payee> <txid>"
+      echo "Check MN status:			./api.sh status <payee> <txid>"
+      echo "Delete monitored MN:			./api.sh delete <payee> <txid>"
+      echo ""
+    else
+      if [ $APICMD == "ticker" ]
+      then
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      elif [ $APICMD == "coinstats" ]
+      then
+        TICKER=$2
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\",\"ticker\":\"$TICKER\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      elif [ $APICMD == "apistats" ]
+      then
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      elif [ $APICMD == "add" ]
+      then
+        TICKER=$2
+        PAYEE=$3
+        TXID=$4
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\",\"ticker\":\"$TICKER\",\"payee\":\"$PAYEE\",\"txid\":\"$TXID\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      elif [ $APICMD == "status" ]
+      then
+        PAYEE=$2
+        TXID=$3
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\",\"payee\":\"$PAYEE\",\"txid\":\"$TXID\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      elif [ $APICMD == "delete" ]
+      then
+        PAYEE=$2
+        TXID=$3
+        curl -s -H "Content-Type:application/json" -d "{\"access-token\":\"$APIKEY\",\"payee\":\"$PAYEE\",\"txid\":\"$TXID\"}" https://nodecheck.io/api/$APICMD | $JQCMD
+      fi
     fi
   fi
 fi
