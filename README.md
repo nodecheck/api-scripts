@@ -46,11 +46,35 @@ without any additional parameters a help screen will appear providing you with i
 
 ### What commands are available?
 
-This script is a test script, and so covers only some basic functionality of our API.  It's not provided with all the API commands that we offer.  The commands the script will return via our API service are:
+This script is a test script, and so may not include all of the API commands available.  To find out what commands are available, run the script as explained above without parameters:
 
-- ticker - this command lists all of the coins on our site (full name and ticker)
-- coinstats - this command with the ticker for the coin of your choice will return the statistics from our platform for said coin.
-- apistats - this command provides information relating to how many API calls you have made, and what your limit is.
+```
+api.sh
+```
+
+or if not in your search path, then:
+
+```
+./api.sh
+/path/to/api.sh
+```
+
+at present the command returns the following:
+
+```
+You need to provide an API command to run this script.
+Examples:
+
+./api.sh <main-command> <parameters>
+
+Display available coins on our site:	./api.sh ticker
+Display coinstats:			./api.sh coinstats <ticker>
+Display apistats:			./api.sh apistats
+
+Add MN to monitor:			./api.sh add <ticker> <payee> <txid>
+Check MN status:			./api.sh status <payee> <txid>
+Delete monitored MN:			./api.sh delete <payee> <txid>
+```
 
 ### How do I uninstall the script?
 
