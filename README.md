@@ -1,6 +1,6 @@
 ## NodeCheck API Test Script
 
-The following script has been created so that API users can check/test our API service immediately once they have signed up to our API service.
+The following script has been created so that API users can check/test our API service immediately once they have signed up to our API service.  An alternative to using the bash script, is to use the nodecheck_postman.json file with Postman to check/test.
 
 ### How to obtain the script?
 
@@ -86,6 +86,12 @@ Delete monitored MN:			./api.sh delete <payee> <txid>
 ### How do I uninstall the script?
 
 Very simple.  Just delete the script that you downloaded from your system, so that it no longer exists on your server.
+
+### How do I use the nodecheck_postman.json file?
+
+First you will need to download Postman: https://www.getpostman.com/downloads/
+
+Open nodecheck_postman.json with Postman once you have it installed.  Go to the "Body" tab, and provide all necessary info to run the API calls (API key, etc, etc).
 
 ### Help and Assistance?
 
