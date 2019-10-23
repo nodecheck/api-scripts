@@ -6,15 +6,27 @@
 # Version: 1.0                   #
 ##################################
 
-# Import required python stuff
-from sys import argv
-import requests
-import simplejson as json
-
 # Set API key and get command passed with script
 apikey="your-api-key-here"
 
-# DO NOT EDIT BELOW THIS LINE
+# DO NOT EDIT BELOW THIS LINE!!!
+
+# Import required python stuff
+from sys import argv
+from pkgutil import find_loader
+
+if find_loader("requests"):
+    import requests
+else:
+    print("Error: python3-requests is not installed!")
+    print("Please install if you wish to use this script.")
+
+if find_loader("simplejson"):
+    import simplejson as json
+else:
+    print("Error: python3-simplejson is not installed!")
+    print("Please install if you wish to use this script.")
+    exit(1)
 
 # Check if apikey has been configured or not
 if apikey == "your-api-key-here":
