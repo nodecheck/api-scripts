@@ -4,17 +4,39 @@ The following script has been created so that API users can check/test our API s
 
 ### How to obtain the script?
 
+There are two possibilities - you can download ```api.sh``` which is a bash script.  There is also a python script ```api.py``` which can also be used.  This however requires for additional packages to be installed on your system.  For example, on a Debian/Ubuntu system:
+
+```
+aptitude install python3-requests python3-simplejson
+```
+
 Download the script using curl (you may need to install the curl package first):
 
+For the bash script:
 ```
 curl -O https://raw.githubusercontent.com/nodecheck/api-scripts/master/api.sh
 ```
 
+For the python script:
+
+```
+curl -O https://raw.githubusercontent.com/nodecheck/api-scripts/master/api.py
+```
+
 once downloaded, the script can then be moved to a more convenient location:
+
+For the bash script:
 
 ```
 mv api.sh /usr/local/bin/
-chmod +x api.sh
+chmod +x /usr/local/bin/api.sh
+```
+
+For the python script:
+
+```
+mv api.py /usr/local/bin/
+chmod +x /usr/local/bin/api.py
 ```
 
 ### How to configure the script?
@@ -22,11 +44,23 @@ chmod +x api.sh
 First you will need an API key.  Please contact one of the NodeCheck team to obtain access to our API via our Discord (link below).
 Edit the script and change:
 
+For the bash script:
+
 ```
 APIKEY=your-api-key-here
 ```
 
-replace ```your-api-key-here``` with the API key obtained from us.  If you do not do this, when you first attempt to run the script, you will see the following:
+replace ```your-api-key-here``` with the API key obtained from us.
+
+For the python script:
+
+```
+apikey"your-api-key-here"
+```
+
+replace ```your-api-key-here``` with the API key obtained from us.
+
+If you do not do this, when you first attempt to run the script, you will see the following:
 
 ```
 You haven't added your API key to this script!

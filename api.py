@@ -12,11 +12,15 @@ import requests
 import simplejson as json
 
 # Set API key and get command passed with script
-apikey=""
+apikey="your-api-key-here"
+
+# DO NOT EDIT BELOW THIS LINE
 
 # Check if apikey has been configured or not
-if apikey == "":
-    print("You haven't edited the script to set \"apikey\" value")
+if apikey == "your-api-key-here":
+    print("You haven't added your API key to this script!")
+    print("Please edit the beginning of this script:\n")
+    print("apikey=your-api-key-here")
     exit(1)
 
 # Check what commands passed and set variables accordingly. Mandatory is only
