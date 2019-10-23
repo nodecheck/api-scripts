@@ -20,6 +20,7 @@ if find_loader("requests"):
 else:
     print("Error: python3-requests is not installed!")
     print("Please install if you wish to use this script.")
+    exit(1)
 
 if find_loader("simplejson"):
     import simplejson as json
