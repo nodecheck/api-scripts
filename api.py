@@ -11,7 +11,9 @@ from sys import argv
 from pkgutil import find_loader
 
 # Set API key and get command passed with script
-apikey = "ZTmRw99r76TtHDxeEZvGwht3PB9khSrs"
+apikey = "your-api-key-here"
+
+# DO NOT EDIT BELOW THIS LINE!
 
 # Check if apikey has been configured or not
 if apikey == "":
