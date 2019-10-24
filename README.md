@@ -55,7 +55,7 @@ replace ```your-api-key-here``` with the API key obtained from us.
 For the python script:
 
 ```
-apikey"your-api-key-here"
+apikey = "your-api-key-here"
 ```
 
 replace ```your-api-key-here``` with the API key obtained from us.
