@@ -16,7 +16,7 @@ apikey = "your-api-key-here"
 # DO NOT EDIT BELOW THIS LINE!
 
 # Check if apikey has been configured or not
-if apikey == "":
+if apikey == "your-api-key-here":
     print("You haven't edited the script to set \"apikey\" value")
     exit(1)
 
