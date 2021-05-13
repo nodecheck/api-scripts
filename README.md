@@ -130,7 +130,7 @@ Open nodecheck_postman.json with Postman once you have it installed.  Go to the 
 ### Help and Assistance?
 
 * Check our API page - https://nodecheck.io/site/api
-* Support on our Discord - https://discordapp.com/invite/3VV5GkG
+* Support on our Discord - https://discord.gg/kk97dGk
 
 ### Disclaimer
 
