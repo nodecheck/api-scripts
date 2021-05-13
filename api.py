@@ -9,6 +9,7 @@
 # Import required python stuff
 from sys import argv
 from pkgutil import find_loader
+from pygments import highlight, lexers, formatters
 
 # Set API key and get command passed with script
 apikey = "your-api-key-here"
@@ -90,9 +91,9 @@ if len(argv) > 1:
         print("Please use one of: ticker, coinstats, apistats, add, status, delete")
         exit(1)
     if apicmd == "ticker":
-        print(json.dumps(results, indent=2, sort_keys=True))
+        print(highlight(json.dumps(results, indent=2, sort_keys=True), lexers.JsonLexer(), formatters.TerminalFormatter()))
     else:
-        print(json.dumps(results, indent=2))
+        print(highlight(json.dumps(results, indent=2), lexers.JsonLexer(), formatters.TerminalFormatter()))
 else:
     print("An API command is required.")
     print("Please use one of: apistats, coinstats, ticker, add, status, delete")

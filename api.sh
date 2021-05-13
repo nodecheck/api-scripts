@@ -8,7 +8,7 @@
 #######################################
 # Place to put your API key           #
 #######################################
-APIKEY=your-api-key-here
+APIKEY="your-api-key-here"
 
 ################################
 # API command that we will run #
